@@ -82,6 +82,13 @@ h1,h2 {
     display: flex;
     justify-content: space-between;
     margin-bottom: 28px;
+    button {
+      a {
+        text-decoration: none;
+        font-size: 14px;
+        color: rgba(68, 109, 214, 1);
+      }
+    }
   } 
   &__card {
     display: flex;
@@ -97,9 +104,6 @@ h1,h2 {
       padding: 30px 30px 16px;
     }
     .card {
-      img {
-        display: none;
-      }
       display: flex;
       flex-wrap: wrap;
       margin-bottom: 20px;
@@ -124,7 +128,7 @@ h1,h2 {
         text-align: left;
         color: rgba(68, 109, 214, 1);
         padding: 0;
-
+        text-decoration: underline;
       }
       .card__footer {
         display: flex;
@@ -136,7 +140,6 @@ h1,h2 {
         margin-top: 20px;
         color: rgba(220, 220, 220, 1);
         a {
-          text-decoration: none;
           color: rgba(220, 220, 220, 1);
         }
         .footer__time {
@@ -162,7 +165,9 @@ h1,h2 {
 img {
   display: block;
 }
-
+.active {
+  color: rgba(66, 66, 66, 1);
+}
 @media screen and (min-width > 700px) {
   .card {
     h1 {
