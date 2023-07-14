@@ -1,12 +1,13 @@
 <template>
     <div class="filters__resources">
-        <button class="btn" @click="filterValue=filterNews.all">Все</button>
-        <button class="btn" @click="filterValue=filterNews.firstSource">3dnews.ru</button>
-        <button class="btn" @click="filterValue=filterNews.secondSource">habr.com</button>
+        <button class="btn"><router-link :to="{name: '', query: {news: filterNews.all }}">Все</router-link></button>
+        <button class="btn"><router-link :to="{name: '', query: {news: filterNews.firstSource }}">3dnews.ru</router-link></button>
+        <button class="btn"><router-link :to="{name: '', query: {news: filterNews.secondSource }}">habr.com</router-link></button>
     </div>
 </template>
 
 <script setup lang="ts">
+import {filterNews} from '../types/types'
 
 </script>
 
