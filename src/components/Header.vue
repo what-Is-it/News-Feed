@@ -21,6 +21,10 @@ const searchValue = ref('')
 const newsStore = useNewsStore()
 async function refresh() {
     searchValue.value = ''
+    let currentElement = document.querySelector('.active-filter')
+    let filtersBlock = document.querySelector('.filters__resources')
+    filtersBlock?.firstChild?.firstChild.classList.add('active-filter')
+    currentElement?.classList.remove('active-filter')
     router.push({name: '', query: {
         news: undefined,
         filter: undefined
